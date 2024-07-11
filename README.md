@@ -3,19 +3,17 @@
 </p>
 
 <h2 align="center">NestJS module for generating & signing URL</h2>
+Fork of [nests-url-generator](https://www.npmjs.com/package/nestjs-url-generator) to allow NestJs 10 version
 
 <p align="center">
-    <a href="https://www.codefactor.io/repository/github/vh13294/nestjs-url-generator">
-        <img src="https://www.codefactor.io/repository/github/vh13294/nestjs-url-generator/badge" alt="CodeFactor" />
+    <a href="https://www.npmjs.com/package/@maxgaurav/nestjs-url-generator">
+        <img src="https://img.shields.io/npm/v/@maxgaurav/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Version" />
     </a>
-    <a href="https://www.npmjs.com/package/nestjs-url-generator">
-        <img src="https://img.shields.io/npm/v/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Version" />
-    </a>
-    <a href="https://www.npmjs.com/package/nestjs-url-generator">
-        <img src="https://img.shields.io/npm/dm/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Downloads" />
+    <a href="https://www.npmjs.com/package/@maxgaurav/nestjs-url-generator">
+        <img src="https://img.shields.io/npm/dm/@maxgaurav/nestjs-url-generator.svg?style=flat-square&sanitize=true" alt="NPM Downloads" />
     </a>
     <a href="#">
-        <img src="https://img.shields.io/npm/l/nestjs-url-generator.svg?colorB=black&label=LICENSE&style=flat-square&sanitize=true" alt="License"/>
+        <img src="https://img.shields.io/npm/l/@maxgaurav/nestjs-url-generator.svg?colorB=black&label=LICENSE&style=flat-square&sanitize=true" alt="License"/>
     </a>
 </p>
 
@@ -28,18 +26,18 @@ nestjs-url-generator can generate plain and signed URLs
 # Installation
 
 ```bash
-npm i --save nestjs-url-generator
+npm i --save @maxgaurav/nestjs-url-generator
 ```
 
 Or if you use Yarn:
 
 ```bash
-yarn add nestjs-url-generator
+yarn add @maxgaurav/nestjs-url-generator
 ```
 
 # Requirements
 
-`nestjs-url-generator` is built to work with Nest 7 and newer versions.
+`nestjs-url-generator` is built to work with Nest 7 and upto version 10.
 
 # Basic Usage
 
@@ -50,7 +48,7 @@ First you need to import [UrlGeneratorModule]:
 > app.module.ts
 
 ```ts
-import { UrlGeneratorModule } from 'nestjs-url-generator';
+import { UrlGeneratorModule } from '@maxgaurav/nestjs-url-generator';
 
 @Module({
   imports: [
@@ -75,7 +73,7 @@ APP_URL=https://localhost:3000
 > signed-url.config.ts
 
 ```ts
-import { UrlGeneratorModuleOptions } from 'nestjs-url-generator';
+import { UrlGeneratorModuleOptions } from '@maxgaurav/nestjs-url-generator';
 
 export function urlGeneratorModuleConfig(): UrlGeneratorModuleOptions {
   return {
@@ -88,7 +86,7 @@ export function urlGeneratorModuleConfig(): UrlGeneratorModuleOptions {
 > app.module.ts
 
 ```ts
-import { UrlGeneratorModule } from 'nestjs-url-generator';
+import { UrlGeneratorModule } from '@maxgaurav/nestjs-url-generator';
 
 @Module({
   imports: [
@@ -124,7 +122,7 @@ generateUrlFromPath({
 > app.controller.ts
 
 ```ts
-import { UrlGeneratorService } from 'nestjs-url-generator';
+import { UrlGeneratorService } from '@maxgaurav/nestjs-url-generator';
 
 @Controller()
 export class AppController {
@@ -177,7 +175,7 @@ SignUrl({
 > app.controller.ts
 
 ```ts
-import { UrlGeneratorService } from 'nestjs-url-generator';
+import { UrlGeneratorService } from '@maxgaurav/nestjs-url-generator';
 
 @Controller()
 export class AppController {
@@ -222,7 +220,7 @@ If the url has been tampered or when the expiration date is due, then a Forbidde
 > app.controller.ts
 
 ```ts
-import { SignedUrlGuard } from 'nestjs-url-generator';
+import { SignedUrlGuard } from '@maxgaurav/nestjs-url-generator';
 
 @Controller()
 export class AppController {
